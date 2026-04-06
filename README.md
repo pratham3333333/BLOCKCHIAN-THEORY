@@ -184,6 +184,7 @@ The lifecycle includes:
 5. Block verification by miners
 6. Block added to blockchain
 7. Transaction confirmed
+<img width="850" height="430" alt="image" src="https://github.com/user-attachments/assets/66db9cff-1ebf-405a-94f0-440119cd6b68" />
 
 Example:
 User A sends 2 Bitcoin to User B:
