@@ -287,3 +287,315 @@ Increasing block size
 
 ---
 
+Here is **📘 UNIT 2 – FULL ELABORATIVE README ANSWERS (Exam Ready)**
+(Long answers, definitions, explanation, examples — ready for 8/10 marks)
+
+---
+
+# 📘 UNIT 2 – Bitcoin & Ethereum (Elaborative README)
+
+---
+
+# 1. Describe Bitcoin and explain how Bitcoin blockchain and network operate
+
+Bitcoin is a decentralized digital cryptocurrency that enables peer-to-peer transactions without the involvement of a central authority such as banks or financial institutions. It was introduced in 2009 by an anonymous person or group known as Satoshi Nakamoto. Bitcoin operates using blockchain technology, which records all transactions in a distributed ledger maintained by multiple nodes.
+
+The Bitcoin network consists of thousands of nodes that communicate using a peer-to-peer protocol. Every node stores a copy of the blockchain and participates in verifying transactions.
+
+### Working of Bitcoin Network
+
+Step 1: A user creates a transaction
+Step 2: The transaction is broadcast to the network
+Step 3: Nodes verify the transaction
+Step 4: Verified transactions are grouped into blocks
+Step 5: Miners solve cryptographic puzzles
+Step 6: Block added to blockchain
+Step 7: Transaction confirmed
+
+### Example
+
+If A sends 1 BTC to B:
+
+* A signs transaction using private key
+* Network verifies signature
+* Miners validate transaction
+* Block added
+* B receives Bitcoin
+
+### Advantages
+
+* Decentralized
+* Transparent
+* Secure
+* No intermediary
+* Limited supply (21 million coins)
+
+---
+
+# 2. Explain Bitcoin scripts and their role in transaction validation
+
+Bitcoin script is a stack-based scripting language used to define conditions under which Bitcoin transactions can be spent. It is not Turing complete and is intentionally simple to maintain security.
+
+Bitcoin scripts are used to:
+
+* Verify ownership
+* Validate transactions
+* Define spending conditions
+
+The most common script is **Pay-to-Public-Key-Hash (P2PKH)**.
+
+### Working
+
+Script contains:
+
+* Locking script (scriptPubKey)
+* Unlocking script (scriptSig)
+
+The unlocking script must satisfy the locking script for the transaction to be valid.
+
+### Example
+
+Condition:
+"Only the person with correct private key can spend Bitcoin"
+
+Script checks:
+
+* Public key
+* Digital signature
+* Hash match
+
+If all conditions satisfied → transaction approved
+
+---
+
+# 3. Compare Full Nodes and SPV Nodes
+
+Full nodes download the entire blockchain and independently verify every transaction and block. They provide maximum security and trust.
+
+SPV (Simplified Payment Verification) nodes download only block headers instead of full blocks. They rely on full nodes for verification.
+
+### Full Node Features
+
+* Stores complete blockchain
+* Verifies all transactions
+* High security
+* Requires more storage
+
+### SPV Node Features
+
+* Stores block headers only
+* Faster synchronization
+* Lower storage requirement
+* Less secure
+
+### Example
+
+Desktop wallet → Full node
+Mobile wallet → SPV node
+
+### Comparison Table
+
+| Feature  | Full Node | SPV Node     |
+| -------- | --------- | ------------ |
+| Storage  | High      | Low          |
+| Security | Very High | Moderate     |
+| Speed    | Slow      | Fast         |
+| Trust    | Trustless | Semi-trusted |
+| Usage    | Servers   | Mobile apps  |
+
+---
+
+# 4. What are Bitcoin wallets?
+
+Bitcoin wallet is a software or hardware application used to store public and private keys that allow users to send and receive Bitcoin. Wallets do not store actual coins but store keys that access blockchain addresses.
+
+### Types of Wallets
+
+Hot Wallet
+Connected to internet
+Example: Mobile wallet
+
+Cold Wallet
+Offline storage
+Example: Hardware wallet
+
+Hardware Wallet
+Physical device storing keys
+
+Paper Wallet
+Keys printed on paper
+
+Desktop Wallet
+Installed on computer
+
+### Example
+
+User installs wallet → gets address → receives Bitcoin → signs transaction → sends Bitcoin
+
+### Advantages
+
+* Secure key management
+* Easy transactions
+* User control over funds
+
+---
+
+# 5. Describe Ethereum and ideas behind its design
+
+Ethereum is an open-source blockchain platform that enables developers to build decentralized applications using smart contracts. It was proposed by Vitalik Buterin in 2013.
+
+Unlike Bitcoin, Ethereum is designed to be programmable and supports automated contract execution.
+
+### Key Ideas Behind Ethereum
+
+* Smart contracts
+* Decentralized applications (DApps)
+* Ethereum Virtual Machine (EVM)
+* Ether cryptocurrency
+* Gas-based execution
+
+### Example
+
+Automatic insurance payment:
+If flight delayed → smart contract releases refund automatically
+
+---
+
+# 6. Types of Ethereum Accounts
+
+Ethereum supports two types of accounts:
+
+### Externally Owned Account (EOA)
+
+* Controlled by private key
+* Used by users
+* Can send transactions
+
+Example: MetaMask wallet account
+
+### Contract Account
+
+* Controlled by smart contract code
+* Cannot initiate transactions directly
+* Executes automatically
+
+Example: Token contract
+
+### Benefits
+
+* Automation
+* Security
+* Programmable logic
+* Trustless transactions
+
+---
+
+# 7. Account State and Merkle Patricia Tree
+
+Ethereum maintains account data using a data structure called the **Merkle Patricia Tree**. It stores account state efficiently and securely.
+
+Account state contains:
+
+* Balance
+* Nonce
+* Storage root
+* Code hash
+
+### Benefits
+
+* Efficient verification
+* Reduced storage
+* Secure hashing
+* Fast lookup
+
+### Example
+
+Instead of storing entire database, Ethereum stores hashed tree structure which helps validate data quickly.
+
+---
+
+# 8. Ethereum Transactions and State Transition Function
+
+Ethereum transactions contain:
+
+* Sender address
+* Receiver address
+* Value
+* Gas limit
+* Gas price
+* Data
+
+Ethereum uses a **state transition function** to update blockchain state.
+
+Concept:
+Current State + Transaction = New State
+
+Example:
+Balance A = 10 ETH
+A sends 2 ETH to B
+New balance A = 8 ETH
+
+State updated across network
+
+---
+
+# 9. Gas and Transaction Fees in Ethereum
+
+Gas is the computational fee required to execute transactions or smart contracts in Ethereum.
+
+Purpose:
+
+* Prevent spam
+* Allocate resources
+* Reward miners/validators
+
+Gas fee formula:
+
+Gas Used × Gas Price = Transaction Fee
+
+Example:
+Gas used = 21000
+Gas price = 50 gwei
+Fee = 21000 × 50 gwei
+
+Higher gas price → faster confirmation
+
+---
+
+# 10. Ether Mining in Ethereum
+
+Mining is the process of validating transactions and creating new blocks in Ethereum (before shift to PoS).
+
+Important Concepts:
+
+Difficulty
+Controls how hard mining is
+
+Proof of Work
+Miners solve puzzle to add block
+
+Stale Blocks
+Valid but not included in main chain
+
+Forks
+Temporary split in blockchain
+
+### Example
+
+Two miners create blocks simultaneously → network splits → one chain becomes main → other becomes stale
+
+---
+
+# Unit 2 Quick Summary
+
+Bitcoin → Digital currency
+Wallet → Stores keys
+Scripts → Transaction validation
+Full node → Full blockchain
+SPV → Lightweight node
+Ethereum → Smart contract platform
+EOA & Contract account
+Gas → Execution fee
+Mining → Block creation
+
+---
