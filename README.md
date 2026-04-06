@@ -6,6 +6,7 @@ Starting again with **UNIT 1 – Elaborative Version**.
 # 📘 Blockchain – Unit 1 (Elaborative README Notes)
 
 ---
+<img width="656" height="223" alt="image" src="https://github.com/user-attachments/assets/60c61ec4-3e7e-4165-9037-2045050abe2e" />
 
 # 1. Concept of Blockchain Technology
 
